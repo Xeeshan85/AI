@@ -3,6 +3,7 @@
 # Main Element Priority Queue
 # Helps a Traveler find the shortest path to reach his Destination
 
+
 class Node:
     def __init__(self, state, parent, cost=0):
         self.state=state
