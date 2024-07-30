@@ -14,7 +14,7 @@ class Puzzle():
         elif algorithm == 'DFS':
             self.DFS = True
         else:
-            raise Exception('Invalid Algorithm')
+            raise Exception('Invalid Algorithm Parameter. Use BFS or DFS.')
         
         self.start = initialState
         self.goal = goalState

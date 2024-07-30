@@ -119,7 +119,7 @@ class Maze():
 
 
 
-m = Maze("C:/Users/Zeeshan/Desktop/AIassign/AI/UN-InformedSearches/maze1.txt", 'DFS')
+m = Maze("maze1.txt", 'DFS')
 m.print()
 m.solve()
 m.print()
