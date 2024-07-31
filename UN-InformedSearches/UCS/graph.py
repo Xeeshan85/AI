@@ -1,3 +1,5 @@
+from DataStructures import PriorityQueue
+
 # Using a Fragment map of Romania from the book of Classical Searches fro Modern Problem Solving
 # Implemented UCS algorithm also known as Dijkstra algorithm in Computer Science
 # Main Element Priority Queue
@@ -10,28 +12,7 @@ class Node:
         self.cost=cost
     
     def __lt__(self, other):
-        return self.cost < other.cost
-    
-class PriorityQueue:
-    def __init__(self):
-        self.frontier=[]
-    
-    def add(self, node):
-        self.frontier.append(node)
-        self.frontier.sort()
-    
-    def contains_state(self, state):
-        return any(node.state==state for node in self.frontier)
-
-    def empty(self):
-        return len(self.frontier) == 0
-
-    def remove(self):
-        if self.empty():
-            raise Exception("Empty Frontier")
-        else:
-            return self.frontier.pop(0)
-    
+        return self.cost < other.cost    
 
 class UCS:
     def get_neighbours(self, city):

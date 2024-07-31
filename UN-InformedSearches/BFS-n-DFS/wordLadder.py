@@ -1,5 +1,6 @@
 from collections import deque
 from string import ascii_lowercase
+import os
 
 class Word_Ladder:
     def __init__(self, start, goal, algorithm):
@@ -14,7 +15,9 @@ class Word_Ladder:
         else:
             raise Exception('Invalid Algorithm Parameter. Use \'BFS\' or \'DFS\'.')
         
-        with open("dictionary.txt") as f:
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        dict_path = os.path.join(base_dir, 'BFS-n-DFS', 'dictionary.txt')
+        with open(dict_path) as f:
             self.dictionary = f.readlines()
         self.dictionary = [word.strip().lower() for word in self.dictionary]
 
